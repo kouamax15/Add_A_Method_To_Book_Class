@@ -61,9 +61,27 @@ public class Book {
     }
 
     //making a new method getDisplayText()
-    public void getDisplayText() {
-        System.out.println ("Book title: " + getTitle());
-        System.out.println("Book author: " + getAuthor());
-        System.out.println("Book description: " + getDescription());
+//    public void getDisplayText() {
+//        System.out.println ("Book title: " + getTitle());
+//        System.out.println("Book author: " + getAuthor());
+//        System.out.println("Book description: " + getDescription());
+    public String getDisplayText() {
+        String result = "";
+        result = getTitle() + getAuthor() + getDescription();
+        return result;
     }
+
+    public double displayBookCost(int number){
+        double total = 0;
+        if (isInStock()) {
+            total = getPrice() * number;
+        } return total;
+   }
+
 }
+
+
+//    int sum = add(x, y);
+//        System.out.println(sum);public int(getsum){
+//        int sum = num1 + num2;
+//        return sum;
